@@ -234,11 +234,11 @@ npm start
 
 ## 📹 Demo Video
 
-[![Metro Police Demo](https://img.shields.io/badge/YouTube-Demo_Video-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![Metro Police Demo](https://img.shields.io/badge/YouTube-Watch_Demo-red?style=for-the-badge&logo=youtube)](https://youtu.be/6iqH_nJ2UjI)
 
-> 🎬 **3-minute demo** showing complete gameplay flow, FIBO integration, and dynamic visual generation.
+> 🎬 **3-minute demo** showing complete gameplay flow, BRIA FIBO integration, and dynamic visual generation.
 >
-> *Video link will be added after upload*
+> [▶️ Watch on YouTube](https://youtu.be/6iqH_nJ2UjI)
 
 ---
 
