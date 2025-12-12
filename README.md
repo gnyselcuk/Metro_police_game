@@ -350,12 +350,6 @@ Each action type triggers different FIBO parameters, demonstrating the precision
 
 ---
 
-## © Copyright
-
-**All Rights Reserved.** This project and its source code are proprietary. Unauthorized copying, modification, distribution, or use of this software is strictly prohibited without prior written permission from the copyright holder.
-
----
-
 ## 🙏 Acknowledgments
 
 - **BRIA AI** for the incredible FIBO model and API
