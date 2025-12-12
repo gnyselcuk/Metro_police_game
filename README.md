@@ -9,7 +9,7 @@
 
 **An immersive detective game where every visual is dynamically generated using BRIA FIBO's JSON-native structured prompts.**
 
-[🎮 Live Demo](#) • [📹 Demo Video](#demo-video) • [🚀 Getting Started](#getting-started) • [🔧 FIBO Integration](#bria-fibo-integration) • [💻 GitHub](https://github.com/gnyselcuk/Metro_police_game)
+[🎮 Live Demo](https://metro-police-game.vercel.app) • [📹 Demo Video](#demo-video) • [🚀 Getting Started](#getting-started) • [🔧 FIBO Integration](#bria-fibo-integration) • [💻 GitHub](https://github.com/gnyselcuk/Metro_police_game)
 
 </div>
 
@@ -234,7 +234,11 @@ npm start
 
 ## 📹 Demo Video
 
-*[Link to 3-minute demo video showing the complete gameplay flow and FIBO integration]*
+[![Detective Noir Demo](https://img.shields.io/badge/YouTube-Demo_Video-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
+> 🎬 **3-minute demo** showing complete gameplay flow, FIBO integration, and dynamic visual generation.
+>
+> *Video link will be added after upload*
 
 ---
 
