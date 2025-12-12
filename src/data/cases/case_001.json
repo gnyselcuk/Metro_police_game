@@ -1,0 +1,565 @@
+{
+    "id": "case_001",
+    "title": "The Silent Office",
+    "description": "Company executive found dead in a locked office. No signs of forced entry. Time is running out.",
+    "introText": "You are standing outside Office 404. The CEO was found dead here one hour ago. The police have sealed the room, but you have 30 minutes before the Feds arrive.",
+    "introImage": null,
+    "startingLocationId": "hallway",
+    "systemInstructions": "In this scenario, the 'truth' section is ABSOLUTE and cannot be changed. The killer, method, and motive are fixed. However, if the player wishes to visit a location not on this list (e.g., roof, basement, parking lot) or speak to a character not listed (e.g., security guard, police officer), you must IMPROVISE these elements in a way that does not contradict the 'truth'. Enrich the scenario, do not restrict the player.",
+    "truth": {
+        "killer": "Marcus Thorne (VP of Sales)",
+        "motive": "To cover up embezzlement. The CEO had discovered discrepancies in Marcus's accounts.",
+        "method": "Spiked the CEO's coffee with a high dose of Digitalis (heart medication). Staged it as a heart attack.",
+        "details": "Marcus entered the office after the murder to delete evidence from the CEO's computer but couldn't crack the password. He panicked and left. He disposed of the Digitalis bottle in the break room trash."
+    },
+    "maps": {
+        "city": {
+            "id": "city",
+            "name": "Metro City",
+            "image": "/case_001_img/map/city_map.webp",
+            "nodes": [
+                {
+                    "id": "office_building",
+                    "name": "Central Office Building",
+                    "x": 50,
+                    "y": 50,
+                    "targetMapId": "office_floor"
+                }
+            ]
+        },
+        "office_floor": {
+            "id": "office_floor",
+            "name": "Office Floor - 4th Floor",
+            "image": "/case_001_img/map/office_blueprint.png",
+            "parentId": "city"
+        }
+    },
+    "locations": {
+        "hallway": {
+            "id": "hallway",
+            "name": "Corridor",
+            "image": null,
+            "description": "A long, dimly lit corridor. The air smells of stale coffee and floor wax. The door to Office 404 is ahead. At the end of the hall are the Executive Lounge and Break Room.",
+            "mapId": "office_floor",
+            "visuals": {
+                "short_description": "Cinematic view of a long, dimly lit corridor. The atmosphere is tense. A heavy oak door marked '404' is slightly ajar at the far end.",
+                "context": "A tense, dimly lit office corridor in a film noir setting. The scene suggests a mystery is unfolding.",
+                "objects": [
+                    {
+                        "name": "Oak Door",
+                        "description": "A heavy oak door with a brass handle, marked with the number 404. The door is slightly ajar.",
+                        "relationship": "Primary focal point leading to the crime scene",
+                        "location": "center",
+                        "relative_size": "medium",
+                        "shape_and_color": "Rectangular door, dark oak brown with brass handle",
+                        "appearance_details": "Door number 404 visible on brass plate, slightly open"
+                    },
+                    {
+                        "name": "Wilted Fern",
+                        "description": "A wilted fern plant in a corner.",
+                        "relationship": "Environmental detail suggesting neglect and decay",
+                        "location": "bottom-left corner",
+                        "relative_size": "small",
+                        "shape_and_color": "Drooping green-brown fern in terracotta pot",
+                        "appearance_details": "Debris visible in soil, plant clearly dying"
+                    }
+                ],
+                "background_setting": "An institutional office corridor with beige walls and polished linoleum floors that reflect the dim overhead lights. The corridor extends into darkness at both ends.",
+                "lighting": {
+                    "conditions": "Dim fluorescent overhead lighting",
+                    "direction": "Overhead, casting harsh shadows downward",
+                    "shadows": "Strong shadows beneath objects, creating dramatic contrast"
+                },
+                "aesthetics": {
+                    "composition": "Eye-level, straight-on view down the corridor. Deep focus. Cinematic wide shot.",
+                    "color_scheme": "Muted beiges, browns, and institutional greens under harsh fluorescent light",
+                    "mood_atmosphere": "Tense, noir, mystery, stale and neglected"
+                },
+                "photographic_characteristics": {
+                    "depth_of_field": "Deep - everything sharp from foreground to background",
+                    "focus": "Full scene in focus, emphasizing the corridor depth",
+                    "camera_angle": "Eye level, straight-on perspective",
+                    "lens_focal_length": "Standard 50mm"
+                },
+                "style_medium": "noir photograph",
+                "artistic_style": "Film noir, cinematic realism"
+            },
+            "coordinates": {
+                "x": 50,
+                "y": 50
+            },
+            "interactables": [
+                {
+                    "id": "door_404",
+                    "name": "Office Door",
+                    "description": "A heavy oak door with a brass handle. Slightly ajar.",
+                    "type": "scenery",
+                    "visuals": {
+                        "object": "heavy oak door with brass handle",
+                        "state": "slightly ajar",
+                        "details": "door number 404 visible"
+                    }
+                },
+                {
+                    "id": "plant",
+                    "name": "Wilted Plant",
+                    "description": "A sad-looking fern in the corner. There's a strange cigarette butt in the soil.",
+                    "type": "item",
+                    "visuals": {
+                        "object": "wilted fern plant in corner",
+                        "state": "dying, neglected",
+                        "details": "cigarette butt in soil"
+                    }
+                }
+            ],
+            "connections": [
+                "office",
+                "break_room",
+                "executive_lounge"
+            ]
+        },
+        "office": {
+            "id": "office",
+            "name": "CEO's Office",
+            "image": null,
+            "description": "The room is messy. Papers are scattered everywhere. A large mahogany desk dominates the center. A chalk outline is taped onto the rug. The window is open.",
+            "mapId": "office_floor",
+            "visuals": {
+                "short_description": "Cinematic view of a chaotic office scene. Papers scattered everywhere. A yellow tape outline on the rug. The window is open with rain outside.",
+                "context": "A chaotic crime scene in a luxurious executive office. Evidence of a struggle or frantic search.",
+                "objects": [
+                    {
+                        "name": "Mahogany Desk",
+                        "description": "A large mahogany executive desk covered in scattered papers and documents.",
+                        "relationship": "Central piece of furniture where the victim worked",
+                        "location": "center",
+                        "relative_size": "large within frame",
+                        "shape_and_color": "Rectangular, rich dark mahogany brown",
+                        "appearance_details": "Papers scattered chaotically, laptop screen glowing"
+                    },
+                    {
+                        "name": "Chalk Outline",
+                        "description": "A yellow tape outline on a Persian rug.",
+                        "relationship": "Marks where the victim's body was found",
+                        "location": "bottom-center",
+                        "relative_size": "medium",
+                        "shape_and_color": "Outline in bright yellow tape",
+                        "appearance_details": "Clear outline on florid rug pattern"
+                    },
+                    {
+                        "name": "Open Window",
+                        "description": "A large open office window with rain visible outside.",
+                        "relationship": "Potential escape route, adds atmospheric tension",
+                        "location": "background right",
+                        "relative_size": "large",
+                        "shape_and_color": "Rectangular window frame, dark outside",
+                        "appearance_details": "Curtains moving slightly, rain streaks"
+                    }
+                ],
+                "background_setting": "A luxurious CEO office with dark wood paneling on the walls and an expensive Persian rug on the floor.",
+                "lighting": {
+                    "conditions": "Dramatic noir lighting with rain casting shadows",
+                    "direction": "Desk lamp casting harsh light and grey daylight from window",
+                    "shadows": "Strong shadows creating dramatic contrast"
+                },
+                "aesthetics": {
+                    "composition": "Standard shot capturing the entire room. Focused on the chaos. Cinematic lighting.",
+                    "color_scheme": "Dark mahogany browns, deep reds from rug, yellow tape",
+                    "mood_atmosphere": "Chaotic, noir, mystery, dramatic, tense"
+                },
+                "photographic_characteristics": {
+                    "depth_of_field": "Medium - desk sharp, background slightly soft",
+                    "focus": "Crime scene elements: chalk outline and desk",
+                    "camera_angle": "Slight high angle overlooking the scene",
+                    "lens_focal_length": "Standard 50mm"
+                },
+                "style_medium": "noir photograph",
+                "artistic_style": "Film noir, crime scene photography"
+            },
+            "coordinates": {
+                "x": 80,
+                "y": 20
+            },
+            "interactables": [
+                {
+                    "id": "desk",
+                    "name": "Mahogany Desk",
+                    "description": "An expensive desk. There's a laptop and a spilled coffee cup on it.",
+                    "type": "scenery",
+                    "visuals": {
+                        "object": "mahogany executive desk",
+                        "state": "cluttered",
+                        "details": "papers scattered, laptop, spilled coffee cup"
+                    }
+                },
+                {
+                    "id": "laptop",
+                    "name": "Laptop",
+                    "description": "Locked. The screen reads 'Incorrect Password Attempt: 3'.",
+                    "type": "item",
+                    "visuals": {
+                        "object": "modern laptop computer",
+                        "state": "locked, screen on",
+                        "details": "error message visible on screen"
+                    }
+                },
+                {
+                    "id": "coffee_cup",
+                    "name": "Coffee Cup",
+                    "description": "Residue at the bottom. Smells like almonds.",
+                    "type": "item",
+                    "visuals": {
+                        "object": "white ceramic coffee cup",
+                        "state": "spilled, residue at bottom",
+                        "details": "almond scent, suspicious"
+                    }
+                },
+                {
+                    "id": "window",
+                    "name": "Window",
+                    "description": "Rain hits the glass. No muddy handprints on the sill, so the killer didn't exit this way.",
+                    "type": "scenery",
+                    "visuals": {
+                        "object": "large office window",
+                        "state": "open, rain visible outside",
+                        "details": "no muddy handprints on sill"
+                    }
+                }
+            ],
+            "connections": [
+                "hallway"
+            ]
+        },
+        "break_room": {
+            "id": "break_room",
+            "name": "Break Room",
+            "image": null,
+            "description": "A small room where vending machines buzz. The coffee machine is still warm. The trash bin is overflowing.",
+            "mapId": "office_floor",
+            "visuals": {
+                "short_description": "Cinematic view of a small break room. A coffee machine on the counter and an overflowing trash bin. Vending machines in the background.",
+                "context": "A neglected office break room, stale and impersonal. The scene is quiet but unsettling.",
+                "objects": [
+                    {
+                        "name": "Coffee Machine",
+                        "description": "A commercial coffee machine, still warm with a half-full pot.",
+                        "relationship": "Connected to the murder weapon - coffee was the delivery method",
+                        "location": "left side",
+                        "relative_size": "medium",
+                        "shape_and_color": "Stainless steel machine, glass pot with dark liquid",
+                        "appearance_details": "Steam visible, power light on"
+                    },
+                    {
+                        "name": "Trash Bin",
+                        "description": "A metal trash bin overflowing with paper cups and wrappers.",
+                        "relationship": "Crucial evidence location - contains the poison vial",
+                        "location": "right side",
+                        "relative_size": "medium",
+                        "shape_and_color": "Grey metal bin",
+                        "appearance_details": "Overflowing with white paper cups"
+                    },
+                    {
+                        "name": "Vending Machines",
+                        "description": "Vending machines with dim internal lighting.",
+                        "relationship": "Background element establishing the break room setting",
+                        "location": "back wall",
+                        "relative_size": "large",
+                        "shape_and_color": "Large rectangular machines with glowing fronts",
+                        "appearance_details": "Stocked with snacks and drinks"
+                    }
+                ],
+                "background_setting": "A small institutional break room with pale yellow walls showing peeling paint. Cramped and neglected.",
+                "lighting": {
+                    "conditions": "Flickering fluorescent tube lighting",
+                    "direction": "Overhead",
+                    "shadows": "Harsh, shifting shadows due to flicker"
+                },
+                "aesthetics": {
+                    "composition": "Standard shot. Eye-level. Centered on the coffee machine and trash bin.",
+                    "color_scheme": "Pale yellows, institutional greys, stainless steel",
+                    "mood_atmosphere": "Stale, claustrophobic, unsettling, institutional neglect"
+                },
+                "photographic_characteristics": {
+                    "depth_of_field": "Medium depth of field",
+                    "focus": "Coffee machine and trash bin in sharp focus",
+                    "camera_angle": "Eye level, straight-on",
+                    "lens_focal_length": "Standard 50mm"
+                },
+                "style_medium": "noir photograph",
+                "artistic_style": "Film noir, institutional photography"
+            },
+            "coordinates": {
+                "x": 20,
+                "y": 80
+            },
+            "interactables": [
+                {
+                    "id": "coffee_machine",
+                    "name": "Coffee Machine",
+                    "description": "A fancy espresso machine. The hopper is empty.",
+                    "type": "scenery",
+                    "visuals": {
+                        "object": "espresso machine",
+                        "state": "dirty, used",
+                        "details": "empty bean hopper"
+                    }
+                },
+                {
+                    "id": "trash_bin",
+                    "name": "Trash Bin",
+                    "description": "Full of paper cups and crumpled notes. A small, empty glass vial glints inside.",
+                    "type": "item",
+                    "visuals": {
+                        "object": "metal trash bin",
+                        "state": "overflowing",
+                        "contents": [
+                            "crumpled papers",
+                            "coffee cups",
+                            "small glass vial"
+                        ]
+                    }
+                }
+            ],
+            "connections": [
+                "hallway"
+            ]
+        },
+        "executive_lounge": {
+            "id": "executive_lounge",
+            "name": "Executive Lounge",
+            "image": null,
+            "description": "A dimly lit lounge with leather chairs and expensive cigars. Marcus Thorne is sitting in the corner.",
+            "mapId": "office_floor",
+            "visuals": {
+                "short_description": "Cinematic view of an executive lounge. Luxurious leather armchairs. Dark wood paneling. Marcus Thorne sitting nervously.",
+                "context": "An exclusive executive lounge in a high-rise building. Wealth and power, shadowed by a recent crime.",
+                "objects": [
+                    {
+                        "name": "Marcus Thorne",
+                        "description": "Marcus Thorne, a middle-aged man in a suit, sitting nervously.",
+                        "relationship": "Primary suspect, present at the crime scene location",
+                        "location": "seated in armchair",
+                        "relative_size": "medium",
+                        "shape_and_color": "Man in grey suit",
+                        "appearance_details": "Sweating, checking watch, anxious expression"
+                    },
+                    {
+                        "name": "Leather Armchairs",
+                        "description": "Luxurious leather armchairs.",
+                        "relationship": "Luxury furniture establishing the executive setting",
+                        "location": "center",
+                        "relative_size": "large within frame",
+                        "shape_and_color": "Deep burgundy leather",
+                        "appearance_details": "Rich texture, brass studs"
+                    },
+                    {
+                        "name": "Crystal Ashtray",
+                        "description": "Crystal ashtray with cigars.",
+                        "relationship": "Detail connecting to the suspect's habits",
+                        "location": "on side table",
+                        "relative_size": "small",
+                        "shape_and_color": "Clear crystal",
+                        "appearance_details": "Half-smoked cigars visible"
+                    }
+                ],
+                "background_setting": "An exclusive executive lounge with dark wood paneling and rich fabrics.",
+                "lighting": {
+                    "conditions": "Dim amber lighting from table lamps",
+                    "direction": "Localized warm pools of light",
+                    "shadows": "Deep shadows in corners, moody atmosphere"
+                },
+                "aesthetics": {
+                    "composition": "Standard shot. Low angle emphasizing the luxury furniture. Startling contrast.",
+                    "color_scheme": "Deep burgundy, mahogany brown, warm amber",
+                    "mood_atmosphere": "Exclusive, tense, luxurious, secretive, noir"
+                },
+                "photographic_characteristics": {
+                    "depth_of_field": "Medium - furniture sharp, corners softly blurred",
+                    "focus": "Marcus Thorne and leather armchair",
+                    "camera_angle": "Low angle, emphasizing power and luxury",
+                    "lens_focal_length": "Standard 50mm"
+                },
+                "style_medium": "noir photograph",
+                "artistic_style": "Film noir, luxury interior photography"
+            },
+            "coordinates": {
+                "x": 80,
+                "y": 80
+            },
+            "interactables": [
+                {
+                    "id": "ashtray",
+                    "name": "Ashtray",
+                    "description": "Contains half-smoked cigars. The brand is 'Cohiba'.",
+                    "type": "scenery",
+                    "visuals": {
+                        "object": "crystal ashtray",
+                        "state": "half-smoked cigars",
+                        "details": "Cohiba brand visible"
+                    }
+                }
+            ],
+            "connections": [
+                "hallway"
+            ]
+        }
+    },
+    "characters": {
+        "janitor": {
+            "id": "janitor",
+            "name": "Old Bill",
+            "description": "Night shift janitor. Looks terrified.",
+            "locationId": "hallway",
+            "bio": "Bill saw someone leave the office at 10:00 PM. He's afraid of losing his job. Stutters when nervous.",
+            "visuals": {
+                "short_description": "Cinematic portrait of an elderly janitor. Terrified expression. Police mugshot style.",
+                "context": "A character portrait for a noir detective game. The subject is an anxious witness.",
+                "objects": [
+                    {
+                        "name": "Old Bill",
+                        "description": "Old Bill, an elderly man with grey stubble.",
+                        "relationship": "Key witness who saw the suspect leaving the crime scene",
+                        "location": "center",
+                        "relative_size": "large (face portrait)",
+                        "shape_and_color": "Caucasian skin tone, grey hair",
+                        "appearance_details": "Wrinkled face, terrified wide eyes, tired"
+                    },
+                    {
+                        "name": "Janitor Uniform",
+                        "description": "Worn blue janitor uniform.",
+                        "relationship": "Identifies his role and working-class status",
+                        "location": "shoulders and chest",
+                        "relative_size": "medium",
+                        "shape_and_color": "Faded navy blue fabric",
+                        "appearance_details": "Name tag visible but blurry"
+                    }
+                ],
+                "background_setting": "A neutral, dark police investigation room background. Blurry.",
+                "lighting": {
+                    "conditions": "Harsh interrogation lighting",
+                    "direction": "Frontal, slightly high angle",
+                    "shadows": "Sharp shadows defining facial features"
+                },
+                "aesthetics": {
+                    "composition": "Close-up portrait. Shallow depth of field focusing on eyes.",
+                    "color_scheme": "Cool tones, blue uniform, grey skin, dark background",
+                    "mood_atmosphere": "Fearful, gritty, noir"
+                },
+                "photographic_characteristics": {
+                    "depth_of_field": "Shallow - face sharp, background completely blurred",
+                    "focus": "Eyes and facial expression",
+                    "camera_angle": "Eye level, slightly frontal",
+                    "lens_focal_length": "Portrait 85mm"
+                },
+                "style_medium": "noir portrait photograph",
+                "artistic_style": "Film noir, police mugshot style"
+            }
+        },
+        "secretary": {
+            "id": "secretary",
+            "name": "Elena Vance",
+            "description": "CEO's assistant. Eyes swollen from crying, holding a handkerchief.",
+            "locationId": "hallway",
+            "bio": "Elena had an unrequited love for the CEO. She heard Marcus arguing violently with the CEO on the day of the murder. She is afraid of Marcus.",
+            "visuals": {
+                "short_description": "Cinematic portrait of a young professional woman. Grief-stricken. Police mugshot style.",
+                "context": "A character portrait for a noir detective game. The subject is a grieving witness.",
+                "objects": [
+                    {
+                        "name": "Elena Vance",
+                        "description": "Elena Vance, a young woman with dark hair in a bun.",
+                        "relationship": "Grieving witness with crucial information about the suspect",
+                        "location": "center",
+                        "relative_size": "large (face portrait)",
+                        "shape_and_color": "Pale skin, dark hair",
+                        "appearance_details": "Red swollen eyes, mascara smudged, holding a tissue"
+                    },
+                    {
+                        "name": "White Blouse",
+                        "description": "White formal blouse.",
+                        "relationship": "Professional attire contrasting with emotional state",
+                        "location": "shoulders",
+                        "relative_size": "medium",
+                        "shape_and_color": "Crisp white fabric",
+                        "appearance_details": "Slightly wrinkled"
+                    }
+                ],
+                "background_setting": "A neutral, dark police investigation room background. Blurry.",
+                "lighting": {
+                    "conditions": "Soft but cold interrogation lighting",
+                    "direction": "Side lighting emphasizing tears",
+                    "shadows": "Soft shadows"
+                },
+                "aesthetics": {
+                    "composition": "Close-up portrait. Shallow depth of field.",
+                    "color_scheme": "Monochrome with high contrast, white blouse against dark background",
+                    "mood_atmosphere": "Sad, tragic, noir"
+                },
+                "photographic_characteristics": {
+                    "depth_of_field": "Shallow - face sharp, background completely blurred",
+                    "focus": "Tear-stained eyes and emotional expression",
+                    "camera_angle": "Eye level, slightly angled",
+                    "lens_focal_length": "Portrait 85mm"
+                },
+                "style_medium": "noir portrait photograph",
+                "artistic_style": "Film noir, emotional portrait"
+            }
+        },
+        "rival": {
+            "id": "rival",
+            "name": "Marcus Thorne",
+            "description": "VP of Sales. Wearing a stylish suit but sweating. Keeps checking his watch.",
+            "locationId": "executive_lounge",
+            "bio": "He was paying off gambling debts with company money. The CEO found out and threatened to fire him. Marcus had to silence him.",
+            "visuals": {
+                "short_description": "Cinematic portrait of a middle-aged businessman. Nervous and sweating. Police mugshot style.",
+                "context": "A character portrait for a noir detective game. The subject is a suspect under pressure.",
+                "objects": [
+                    {
+                        "name": "Marcus Thorne",
+                        "description": "Marcus Thorne, middle-aged man with slicked back hair.",
+                        "relationship": "The killer - primary suspect under interrogation",
+                        "location": "center",
+                        "relative_size": "large (face portrait)",
+                        "shape_and_color": "Tanned skin, dark hair",
+                        "appearance_details": "Beads of sweat on forehead, nervous eyes, looking away"
+                    },
+                    {
+                        "name": "Grey Suit",
+                        "description": "Expensive grey suit with loosened tie.",
+                        "relationship": "Expensive attire showing his executive status and current dishevelment",
+                        "location": "shoulders",
+                        "relative_size": "medium",
+                        "shape_and_color": "Charcoal grey wool suit, silk tie",
+                        "appearance_details": "Tie knot loosened, collar slightly unbuttoned"
+                    }
+                ],
+                "background_setting": "A neutral, dark police investigation room background. Blurry.",
+                "lighting": {
+                    "conditions": "Harsh overhead light",
+                    "direction": "Top down",
+                    "shadows": "Shadows over eyes hiding intent"
+                },
+                "aesthetics": {
+                    "composition": "Close-up portrait. Sharp focus.",
+                    "color_scheme": "Grey, charcoal, skin tones, noir atmosphere",
+                    "mood_atmosphere": "Guilty, anxious, tense, noir"
+                },
+                "photographic_characteristics": {
+                    "depth_of_field": "Shallow - face razor sharp, background dark and blurred",
+                    "focus": "Sweating forehead and nervous eyes",
+                    "camera_angle": "Eye level, confrontational",
+                    "lens_focal_length": "Portrait 85mm"
+                },
+                "style_medium": "noir portrait photograph",
+                "artistic_style": "Film noir, interrogation photography"
+            }
+        }
+    },
+    "globalClues": [
+        "The victim was left-handed",
+        "It rained all night",
+        "The CEO had no known heart condition",
+        "The office door was not locked from the inside, just closed"
+    ]
+}
