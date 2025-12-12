@@ -5,7 +5,6 @@
 ![Metro Police Banner](https://img.shields.io/badge/BRIA_FIBO-Powered-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8+PC9zdmc+)
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 **An immersive detective game where every visual is dynamically generated using BRIA FIBO's JSON-native structured prompts.**
 
@@ -351,9 +350,9 @@ Each action type triggers different FIBO parameters, demonstrating the precision
 
 ---
 
-## 📄 License
+## © Copyright
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+**All Rights Reserved.** This project and its source code are proprietary. Unauthorized copying, modification, distribution, or use of this software is strictly prohibited without prior written permission from the copyright holder.
 
 ---
 
