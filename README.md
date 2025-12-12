@@ -9,7 +9,7 @@
 
 **An immersive detective game where every visual is dynamically generated using BRIA FIBO's JSON-native structured prompts.**
 
-[🎮 Live Demo](#) • [📹 Demo Video](#demo-video) • [🚀 Getting Started](#getting-started) • [🔧 FIBO Integration](#bria-fibo-integration)
+[🎮 Live Demo](#) • [📹 Demo Video](#demo-video) • [🚀 Getting Started](#getting-started) • [🔧 FIBO Integration](#bria-fibo-integration) • [💻 GitHub](https://github.com/gnyselcuk/Metro_police_game)
 
 </div>
 
@@ -180,8 +180,8 @@ const systemPrompt = `
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/detective-noir.git
-cd detective-noir
+git clone https://github.com/gnyselcuk/Metro_police_game.git
+cd Metro_police_game
 
 # Install dependencies
 npm install
